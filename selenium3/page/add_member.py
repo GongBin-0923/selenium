@@ -6,9 +6,9 @@ from selenium3.page.base_page import BasePage
 class AddMember(BasePage):
     # 在添加页面输入内容保存
     def add_member(self):
-        self.driver.find_element_by_id("username").send_keys("abcde")
-        self.driver.find_element_by_id("memberAdd_acctid").send_keys("abcdsddde")
-        self.driver.find_element_by_id("memberAdd_phone").send_keys("18655552222")
+        self.driver.find(By.ID, "username").send_keys("abcde")
+        self.driver.find(By.ID, "memberAdd_acctid").send_keys("abcdsddde")
+        self.driver.find(By.ID, "memberAdd_phone").send_keys("18655552222")
         # 保存
         self.driver.find_element(By.CSS_SELECTOR, '.js_btn_save').click()
 
